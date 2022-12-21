@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Svg & Normalize/all.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>IWB 202</title>
+  </head>
+  <body>
+    <div class="contener">
+      <div class="bar" id="bar">
+        <i class="fas fa-bars"></i>
+      </div>
+      <aside class="aside">
+        <div class="cancel-bar" id="cancel-bar">
+          <i class="fas fa-xmark"></i>
+        </div>
+        <div class="img-cont flex">
+          <img src="2.png" alt="" />
+        </div>
+        <div class="our-name">
+          <p>audaiudiw</p>
+          <p>alkwdwakjd</p>
+        </div>
+        <div class="on-off flex">
+          <p class="svu">2010-2022 SVU All Rights Reserved....</p>
+          <div class="on-off-line flex" id="on">
+            <a class="stateos" href="https://younsabood.github.io/SVU/">
+              Offline
+            </a>
+            <i class="fas fa-power-off"></i>
+          </div>
+        </div>
+      </aside>
+      <section class="cont-form wh100">
+        <form
+          action="https://sheetdb.io/api/v1/jzo9sx7vzeiyx"
+          method="post"
+          id="sheetdb-form"
+          class="flex form"
+        >
+          <div class="input-form flex">
+            <div class="label-input flex">
+              <input
+                type="text"
+                class="input"
+                placeholder=" "
+                id="account_name"
+                name="account_name"
+                pattern="(?=.*[A-Z]).{1,1}(?=.*[a-z]).{1,}_[0-9]{6,6}$"
+                required
+              />
+              <label for="account_name" class="label">اسم المستخدم</label>
+            </div>
+            <input
+              type="number"
+              name="id"
+              id="id"
+              style="opacity: 0; position: absolute; top: 0; left: 0"
+            />
+            <div class="label-input flex">
+              <input
+                type="text"
+                class="input"
+                placeholder=" "
+                id="username"
+                name="username"
+                pattern="[أ-ي].{1,}"
+                required
+              />
+              <label for="username" class="label">اسم الطالب</label>
+            </div>
+          </div>
+          <div class="input-form flex">
+            <div class="label-input flex">
+              <input
+                type="text"
+                class="number input"
+                id="number"
+                pattern="[+][0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="number"
+                placeholder=" "
+                required
+              />
+              <label for="number" class="label lbl">رقم الهاتف</label>
+            </div>
+            <div class="label-input flex">
+              <input
+                type="text"
+                class="input"
+                placeholder=" "
+                id="birth"
+                name="birth"
+                required
+              />
+              <label for="birth" class="label">تاريخ الميلاد</label>
+            </div>
+          </div>
+          <div class="input-form flex">
+            <div class="select">
+              <select name="program" id="prog" required>
+                <option value="" selected disabled hidden>البرنامج</option>
+                <option value="Bait">Bait</option>
+                <option value="Bact">Bact</option>
+                <option value="Bimm">Bimm</option>
+                <option value="Bit">Bit</option>
+                <option value="Bis">Bis</option>
+                <option value="Tic">Tic</option>
+                <option value="Ite">Ite</option>
+                <option value="Mba">Mba</option>
+                <option value="Mda">Mda</option>
+                <option value="Miq">Miq</option>
+              </select>
+            </div>
+            <div class="restart flex">
+              <a href="#" id="captcha" class="captcha" onclick="createCaptcha()">رمزالحقق</a>
+            </div>
+            <div class="label-input flex">
+              <input
+                type="text"
+                id="cap"
+                placeholder=" "
+                class="input"
+                name="cap"
+                required
+              />
+              <label for="cap" class="label">رمز التحقق</label>
+            </div>
+          </div>
+          <div class="button-cont flex">
+            <button type="submit" id="signupbtn" disabled class="signupbtn-all">
+              ارسال البيانات
+            </button>
+            <button type="reset" class="signupbtn-all">إعادة تعيين</button>
+          </div>
+        </form>
+      </section>
+      <section class="s2">
+        <div class="container">
+          <div class="combo flex">
+            <div class="select">
+              <select id="prog-select" required>
+                <option value="" selected disabled hidden>البرنامج</option>
+                <option value="">-------</option>
+                <option value="Bait">Bait</option>
+                <option value="Bact">Bact</option>
+                <option value="Bimm">Bimm</option>
+                <option value="Bit">Bit</option>
+                <option value="Bis">Bis</option>
+                <option value="Tic">Tic</option>
+                <option value="Ite">Ite</option>
+                <option value="Mba">Mba</option>
+                <option value="Mda">Mda</option>
+                <option value="Miq">Miq</option>
+              </select>
+            </div>
+            <button class="signupbtn-all" id="show">اظهار</button>
+            <div class="spiner" id="spin">
+              <i class="fa fa-refresh" style="font-size: 24px"></i>
+            </div>
+            <label for="sort" class="label">اسم الحساب</label>
+            <input
+              type="radio"
+              name="sort"
+              value="account_name"
+              class="radio"
+            />
+            <label for="sort" class="label">اسم الطالب</label>
+            <input type="radio" name="sort" value="username" class="radio" />
+            <label for="sort" class="label">الرقم</label>
+            <input type="radio" name="sort" value="id" class="radio" />
+            <label for="sort" class="label">البرنامج</label>
+            <input type="radio" name="sort" value="program" class="radio" />
+          </div>
+          <table class="tablemanager" border="1">
+            <thead>
+              <tr>
+                <th>الرقم</th>
+                <th>البرنامج</th>
+                <th>الحساب</th>
+                <th>اسم الطالب</th>
+                <th>رقم الهاتف</th>
+                <th>تاريخ الميلاد</th>
+              </tr>
+            </thead>
+            <tbody id="data"></tbody>
+          </table>
+        </div>
+        <div class="api">
+         <div class="copy">
+            <i class="fas fa-copy"></i>
+         </div>
+          <textarea class="tt wh100" spellcheck="false" disabled></textarea>
+        </div>
+      </section>
+    </div>
+    <script src="Svg & Normalize/all.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

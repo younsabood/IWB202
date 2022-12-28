@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar">
   <head>
+    <!--اكود الاساسي لاي صفحة-->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--خطوط جوجل-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,31 +18,39 @@
       href="https://fonts.googleapis.com/css2?family=Cousine:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="all.min.css" />
-    <link rel="stylesheet" href="main.css" />
+    <!-- مكتبة الايقونات وملف css الاساسي -->
     <link rel="icon" type="image/png" href="2.png">
+    <link rel="stylesheet" href="Svg & Normalize/all.min.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>IWB 202</title>
   </head>
   <body>
+    <!-- الحاوية الاساسية لكل العناصر -->
     <div class="contener">
+      <!-- ايقونة (=) والحاوية الخاصة بها تظهر فقط باجهزة الهاتف المحمول -->
       <div class="bar" id="bar">
         <i class="fas fa-bars"></i>
       </div>
+      <!-- بدابة حاوية العناصر الجانبية -->
       <aside class="aside">
+        <!-- ايقونة × لاغلاق النافذة الجانبية بالهاتف المحمول -->
         <div class="cancel-bar" id="cancel-bar">
           <i class="fas fa-xmark"></i>
         </div>
+        <!-- ايقونة الموقع و الحاوية الخاصة بها -->
         <div class="img-cont flex">
           <img src="2.png" alt="" />
+          <!-- الاسماء  -->
           <p>Dr.Mazen Khoder</p>
         </div>
         <div class="our-name">
-          <p>Youns_204798</p>
-          <p>Rama_198955</p>
-          <p>Yazan_207099</p>
-          <p>Ola_173654</p>
-          <p>Qasem_159291</p>
+          <p>Youns Abood : Youns_204798</p>
+          <p>Ola AboSalah : Ola_173654</p>
+          <p>Rama Mless : Rama_198955</p>
+          <p>Yazan Tmraz : Yazan_207099</p>
+          <p>Qasem Kodeme : Qasem_159291</p>
         </div>
+        <!-- معلومات حالة الاتصال و الحقوق -->
         <div class="on-off flex">
           <p class="svu">2010-2022 SVU All Rights Reserved....</p>
           <div class="on-off-line flex" id="on">
@@ -51,14 +61,13 @@
           </div>
         </div>
       </aside>
+      <!-- نهاية الحاوية الجانبية -->
+      <!-- القسم الاول ال input form -->
       <section class="cont-form wh100">
-        <form
-          action="https://sheetdb.io/api/v1/jzo9sx7vzeiyx"
-          method="post"
-          id="sheetdb-form"
-          class="flex form"
-        >
+        <form method="post" id="sheetdb-form" class="flex form">
+          <!-- قمنا بوضع كل 2 input بحاوية لسهولة التنسيق -->
           <div class="input-form flex">
+            <!-- اسم المستخدم والحساب و ال id -->
             <div class="label-input flex">
               <input
                 type="text"
@@ -71,6 +80,7 @@
               />
               <label for="account_name" class="label">اسم المستخدم</label>
             </div>
+            <!-- id لاداعي لان يكون ظاهر فهو تلقائي التعبئة -->
             <input
               type="number"
               name="id"
@@ -90,6 +100,7 @@
               <label for="username" class="label">اسم الطالب</label>
             </div>
           </div>
+          <!-- حاوية المدخلات الثانية -->
           <div class="input-form flex">
             <div class="label-input flex">
               <input
@@ -116,6 +127,7 @@
             </div>
           </div>
           <div class="input-form flex">
+            <!-- خيارات البرنامج -->
             <div class="select">
               <select name="program" id="prog" required>
                 <option value="" selected disabled hidden>البرنامج</option>
@@ -131,8 +143,11 @@
                 <option value="Miq">Miq</option>
               </select>
             </div>
+            <!-- الكاباتشا -->
             <div class="restart flex">
-              <a href="#" id="captcha" class="captcha" onclick="createCaptcha()">رمزالحقق</a>
+              <a href="#" id="captcha" class="captcha" onclick="createCaptcha()"
+                >رمزالحقق</a
+              >
             </div>
             <div class="label-input flex">
               <input
@@ -146,16 +161,21 @@
               <label for="cap" class="label">رمز التحقق</label>
             </div>
           </div>
+          <!-- حاوية الازرار و الازرار -->
           <div class="button-cont flex">
             <button type="submit" id="signupbtn" disabled class="signupbtn-all">
               ارسال البيانات
             </button>
-            <button type="reset" class="signupbtn-all">إعادة تعيين</button>
+            <button type="reset" id="reset" class="signupbtn-all">
+              إعادة تعيين
+            </button>
           </div>
         </form>
       </section>
+      <!-- نهاية الفورم والقسم الاول وبدية القسم الثاني -->
       <section class="s2">
         <div class="container">
+          <!-- قائمة الكومبو بوكس لل sort و خيارات ال sort حسب البرنامج -->
           <div class="combo flex">
             <div class="select">
               <select id="prog-select" required>
@@ -173,10 +193,12 @@
                 <option value="Miq">Miq</option>
               </select>
             </div>
+            <!-- زر الاظهار -->
             <button class="signupbtn-all" id="show">اظهار</button>
             <div class="spiner" id="spin">
               <i class="fa fa-refresh" style="font-size: 24px"></i>
             </div>
+            <!-- خيارات الترتيب -->
             <label for="sort" class="label">اسم الحساب</label>
             <input
               type="radio"
@@ -191,6 +213,7 @@
             <label for="sort" class="label">البرنامج</label>
             <input type="radio" name="sort" value="program" class="radio" />
           </div>
+          <!-- جدول المخرجات -->
           <table class="tablemanager" border="1">
             <thead>
               <tr>
@@ -202,18 +225,24 @@
                 <th>تاريخ الميلاد</th>
               </tr>
             </thead>
+            <!-- جسم الجدول فارغ سيعبأ من ال object -->
             <tbody id="data"></tbody>
           </table>
+          <!-- نهاية الجدول -->
         </div>
+        <!-- صندوق نص json و زر النسخ -->
         <div class="api">
-         <div class="copy">
+          <div class="copy">
             <i class="fas fa-copy"></i>
-         </div>
+          </div>
           <textarea class="tt wh100" spellcheck="false" disabled></textarea>
         </div>
       </section>
+      <!-- نهاية الصندوق النصي و بنهاية القسم -->
     </div>
-    <script src="all.min.js"></script>
+    <!-- نهاية الحاوية الاساسية -->
+    <!-- استدعاء ملفات js -->
+    <script src="Svg & Normalize/all.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

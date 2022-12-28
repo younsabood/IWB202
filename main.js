@@ -121,8 +121,6 @@ form.addEventListener("submit", (e) => {
   document.getElementById("reset").click(); //الضغط على ريسيت لافراغ الحقول
   activeCaptcha.click(); //لتغيير الكاباتشا
   //اعادة النوع الافتراصي للحقول
-  reset.click();
-  activeCaptcha.click();
   signup.disabled = true;
   number.setAttribute("pattern", "[+][0-9]{3}-[0-9]{3}-[0-9]{4}");
   birth.type = "text";

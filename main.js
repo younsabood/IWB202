@@ -119,17 +119,14 @@ form.addEventListener("submit", (e) => {
   svu.push(obj); //و حشره بالمصفوفة وتصبحة مصفوفة من عدة اوبجيكت
   alert("تمت الاضافة بنجاح !!!"); //رسالة
   document.getElementById("reset").click(); //الضغط على ريسيت لافراغ الحقول
-  activeCaptcha.click();//لتغيير الكاباتشا
+  activeCaptcha.click(); //لتغيير الكاباتشا
   //اعادة النوع الافتراصي للحقول
-  if (birth.value == "") {
-    birth.type = "text";
-  } else {
-    birth.type = "date";
-  }
-  if (number.value == "") {
-    number.placeholder = " ";
-  }
-  signup.disabled = true; //تعطيل الزر
+  reset.click();
+  activeCaptcha.click();
+  signup.disabled = true;
+  number.setAttribute("pattern", "[+][0-9]{3}-[0-9]{3}-[0-9]{4}");
+  birth.type = "text";
+  number.placeholder = " ";
 });
 //لاظهار البيانات
 function fet(x) {
@@ -211,7 +208,8 @@ function fet(x) {
       tt.textContent += JSON.stringify(json_data, null, 4);
     } else if (
       itemData.program != prog_select.value &&
-      prog_select.value != "" && z != true
+      prog_select.value != "" &&
+      z != true
     ) {
       //اذا لم يجد مايبحث عنه يصبح الجدول فارغ
       document.getElementById("data").innerHTML = "";

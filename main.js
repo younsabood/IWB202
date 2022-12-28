@@ -135,6 +135,7 @@ form.addEventListener("submit", (e) => {
 function fet(x) {
   var temp = ""; //جسم الجدول
   tt.innerHTML = "";
+  var z = false;
   var json_data = {}; //json array
   svu = svu.sort(function (a, b) {
     //التصفية
@@ -171,7 +172,7 @@ function fet(x) {
   svu.forEach((itemData) => {
     //فور على كل العناصر بعد الترتيب
     if (itemData.program == prog_select.value && prog_select.value != "") {
-      var z = true; //تم ايجاده
+      z = true; //تم ايجاده
       //اضافتهم للجدول
       temp += "<tr>";
       temp += "<td>" + itemData.id + "</td>";
